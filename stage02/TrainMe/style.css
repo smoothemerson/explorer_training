@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --color-base-black: #1f1534;
+  --color-base-h1-span-blue: #89c5cc;
+  --color-base-section-gray: #7d7987;
+  --color-base-white: white;
+
+  --bg-button-green: #69b99d;
+  --bg-button-dark-green: #4ea788;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+
+  background: linear-gradient(
+    180deg,
+    rgba(227, 255, 248, 0) 82.08%,
+    rgba(227, 255, 248, 0.38) 100%
+  );
+  min-height: 100vh;
+}
+
+.page {
+  width: 100rem;
+  margin: 0 auto;
+  padding-top: 6.5rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 5.5rem;
+}
+
+ul {
+  display: flex;
+  gap: 4.8rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--color-base-black);
+  text-decoration: none;
+}
+
+ul li a {
+  opacity: 0.5;
+  font-size: 1.6rem;
+}
+
+ul li a:hover {
+  font-weight: bold;
+  opacity: 1;
+}
+
+h1,
+ul {
+  font-family: "Mulish", sans-serif;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: 4.9rem;
+  line-height: 5.6rem;
+  color: var(--color-base-black);
+
+  font-weight: normal;
+
+  width: 49rem;
+}
+
+h1 span {
+  color: var(--color-base-h1-span-blue);
+  font-weight: bold;
+}
+
+section p {
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+  color: var(--color-base-section-gray);
+
+  margin: 4rem 0;
+}
+
+button {
+  color: var(--color-base-white);
+  text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
+
+  background: var(--bg-button-green);
+  border: none;
+  padding: 1.4rem 3.2rem 1.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--bg-button-dark-green);
+}
+
+footer {
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+
+  text-align: center;
+
+  margin-top: 8rem;
+}
+
+footer a {
+  font-weight: bold;
+}
+
+#balls {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}

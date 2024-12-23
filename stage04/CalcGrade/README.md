@@ -1,4 +1,4 @@
-<h1 align="center"> Calc2Num </h1>
+<h1 align="center"> CalcGrade </h1>
 
 <p align="center">
   <a href="#-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -8,7 +8,7 @@
 <br>
 
 <p align="center">
-  <img alt="Calc2Num" src="./github/preview.png" width="100%">
+  <img alt="CalcGrade" src="./github/preview.png" width="100%">
 </p>
 
 ## 🚀 Technologies
@@ -21,6 +21,6 @@ This project was developed with the following technologies:
 
 ## 💻 Project
 
-Exercise 01 shows the results of different operations by the numbers given.
+Exercise 02 calculate the average of the tests of some students and give the answer if they pass or not in the test.
 
 - Project given by Rocketseat in Stage 04 of the Explorer Course

@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  },
+  "name": "github-favorites",
+  "version": "1.0.0",
+  "main": "main.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "lite-server"
+  },
+  "author": "smoothemerson",
+  "license": "ISC",
+  "description": "A simple project just to practice Javascript by Rocketseat"
+}

@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: hsl(0, 0%, 100%);
+  --text-color: hsl(240, 6%, 21%);
+  --primary-color: hsl(240, 6%, 21%);
+  --bg-song: hsl(240, 9%, 89%);
+  --bg-clicked-song: hsl(194, 97%, 31%);
+  --text-clicked-song: hsl(0, 0%, 100%);
+  --text-color-dark-mode: hsl(0, 0%, 100%);
+
+  font-size: clamp(40%, 1% + 2vw, 62.5%);
+}
+
+#toggle-mode {
+  position: absolute;
+  top: 3.2rem;
+  right: 3.2rem;
+  font-size: 3.2rem;
+  line-height: 0;
+
+  color: var(--text-color);
+}
+
+.sr-only {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+
+  margin: -1px;
+  padding: 0px;
+  border: 0;
+  appearance: none;
+}
+
+.app {
+  gap: 20rem;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+
+  display: grid;
+  height: 100vh;
+  place-content: center;
+}
+
+.flex {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+#timer {
+  font-size: 12.6rem;
+  font-weight: 500;
+  font-family: sans-serif;
+
+  text-align: center;
+}
+
+#controls {
+  margin-top: 1.7rem;
+  gap: 4rem;
+  border-radius: 999rem;
+
+  justify-content: center;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  color: var(--primary-color);
+
+  cursor: pointer;
+
+  font-size: 6rem;
+}
+
+#songs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 3.2rem;
+}
+
+.song {
+  padding: 4.8rem 4.7rem;
+  border-radius: 2.4rem;
+
+  background-color: var(--bg-song);
+}
+
+.clicked {
+  background-color: var(--bg-clicked-song);
+  color: var(--text-clicked-song);
+}
+
+/* controls */
+html.dark {
+  --bg-color: hsl(194, 5%, 7%);
+  --text-color: hsl(194, 40%, 98%);
+}
+
+html.dark button {
+  background-color: transparent;
+  color: var(--text-clicked-song);
+}
+
+html.dark .ph-moon,
+html:not(.dark) .ph-sun {
+  display: none;
+}
+
+.running .ph-play-circle,
+html:not(.running) .ph-pause-circle {
+  display: none;
+}

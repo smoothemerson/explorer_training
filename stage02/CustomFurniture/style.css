@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --color-base-orange: #f90;
+  --color-base-gray: #7d7987;
+  --color-base-white: #eceff2;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+}
+
+#hero {
+  width: 59.2rem;
+  margin: 0 auto 7.2rem;
+}
+
+#hero img {
+  margin-bottom: 7.2rem;
+}
+
+h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 4.9rem;
+  line-height: 5.6rem;
+  font-weight: normal;
+
+  margin-bottom: 3.2rem;
+}
+
+h1 span {
+  font-weight: bold;
+}
+
+span,
+a {
+  color: var(--color-base-orange);
+}
+
+p,
+#footer {
+  color: var(--color-base-gray);
+
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+}
+
+#footer a {
+  text-decoration: none;
+}
+
+#footer a + a {
+  margin-left: 2.8rem;
+}
+
+#footer .line {
+  width: 56.8rem;
+  height: 0px;
+
+  margin: 0 auto .8rem;
+
+  border: 1px solid var(--color-base-white);
+}
+
+#balls {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+}

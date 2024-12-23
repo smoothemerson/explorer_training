@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore sem limites</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="container">
+      <img
+        id="astronauta"
+        src="./assets/astronauta.png"
+        alt="Imagem de um astronauta no espaço"
+      />
+      <div class="headerDiv">
+        <h1>Explore sem limites</h1>
+        <p>Porque o aprendizado é contínuo</p>
+        <img
+          id="setaparaBaixo"
+          src="./assets/SetaParaBaixo.svg"
+          alt="Seta apontando para baixo"
+          class="setaparaBaixo"
+        />
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="mainDiv">
+        <div class="cards">
+          <img src="./assets/planetaMarte.png" alt="Imagem do Planeta Marte" />
+          <h3>Não pare nunca</h3>
+          <p>
+            Se você deseja ter sucesso nos estudos, é fundamental que você adote
+            uma mentalidade de "não pare nunca". Estudar de forma consistente e
+            contínua é a chave para o progresso e a conquista de seus objetivos.
+          </p>
+        </div>
+        <div class="cards">
+          <img
+            src="./assets/planetaAgua.png"
+            alt="Imagem de um Planeta de água"
+          />
+          <h3>Só volta</h3>
+          <p>
+            Se você parou ou perdeu o ritmo em alguma atividade ou projeto,
+            saiba que nunca é tarde para recomeçar. Às vezes, as circunstâncias
+            podem mudar, ou podemos nos sentir desmotivados ou sobrecarregados.
+          </p>
+        </div>
+        <div class="cards">
+          <img src="./assets/planetaRosa.png" alt="Imagem de um Planeta Rosa" />
+          <h3>Siga seu ritmo</h3>
+          <p>
+            Avançar pouco a pouco mantém progresso constante em objetivos,
+            evitando parar ou desistir. Mesmo pequenos passos nos aproximam do
+            destino e motivam a continuidade. Não subestime o poder de cada ação
+            rumo ao objetivo final.
+          </p>
+        </div>
+      </div>
+      <div class="secondPart">
+        <form
+          class="myform"
+          action="https://formsubmit.co/emerson8096@gmail.com"
+          method="POST"
+        >
+          <fieldset>
+            <div class="fieldset-wrapper">
+              <legend>Entre em contato</legend>
+
+              <div class="input-wrapper-special">
+                <img
+                  src="./assets/person.svg"
+                  id="person"
+                  alt="Ícone de uma pessoa"
+                  class="input-icon"
+                />
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Seu nome"
+                  autocomplete="name"
+                  required
+                />
+              </div>
+
+              <div class="input-wrapper-special">
+                <img
+                  src="./assets/at.svg"
+                  id="at"
+                  alt="Imagem de um @"
+                  class="input-icon"
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+
+              <div class="input-wrapper">
+                <textarea
+                  name="message"
+                  placeholder="Digite sua mensagem aqui..."
+                ></textarea>
+              </div>
+              <button class="mybutton" type="submit">Enviar mensagem</button>
+            </div>
+          </fieldset>
+        </form>
+        <img
+          src="./assets/img.svg"
+          alt="Imagem de uns riscos"
+          class="riskImg"
+        />
+      </div>
+    </main>
+
+    <footer class="container">
+      <p>© 2023 - Rocketseat Explorer</p>
+    </footer>
+  </body>
+</html>

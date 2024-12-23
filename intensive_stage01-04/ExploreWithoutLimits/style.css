@@ -1,0 +1,315 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --color-base-white: #ffffff;
+  --color-base-black: #000000;
+  --color-base-pink: #b52184;
+  --color-base-dark-blue: #312d64;
+  --color-base-blue-footer: #343193;
+  --color-base-dark-blue-footer: #302c63;
+}
+
+html,
+body,
+input,
+textarea,
+button {
+  font-family: "Mulish", sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+
+  background-color: var(--color-base-white);
+  color: var(--color-base-black);
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+header {
+  padding: 0 3.2rem;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.7rem;
+}
+
+.headerDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 5rem;
+}
+
+header .headerDiv h1 {
+  font-weight: 900;
+  font-size: 3.2rem;
+
+  color: var(--color-base-pink);
+}
+
+header .headerDiv p {
+  font-weight: 600;
+  font-size: 2rem;
+
+  color: var(--color-base-dark-blue);
+
+  margin-bottom: 2rem;
+}
+
+main {
+  background-color: var(--color-base-white);
+}
+
+main .mainDiv,
+button,
+footer {
+  background: linear-gradient(
+    96deg,
+    var(--color-base-blue-footer) 0%,
+    var(--color-base-dark-blue-footer) 99.68%
+  );
+}
+
+main .mainDiv {
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 4rem;
+  gap: 5rem;
+}
+
+main .mainDiv .cards {
+  background-color: var(--color-base-white);
+  padding: 2.6rem;
+
+  border-radius: 2rem;
+}
+
+main .cards h3 {
+  margin: 1rem 0 0.5rem;
+
+  font-size: 3rem;
+  font-weight: 900;
+
+  color: var(--color-base-pink);
+}
+
+main .mainDiv .cards p {
+  font-size: 1.6rem;
+
+  color: var(--color-base-dark-blue);
+
+  text-align: justify;
+}
+
+main .myform {
+  background: var(--color-base-white);
+
+  margin-top: 6rem;
+  min-height: 40rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+fieldset {
+  border: none;
+  margin: 2rem;
+}
+
+.fieldset-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+fieldset legend {
+  font-size: 3.2rem;
+  font-weight: 900;
+
+  border-bottom: 1px solid #e6e6f0;
+
+  color: var(--color-base-pink);
+}
+
+input {
+  max-width: 60rem;
+}
+
+textarea {
+  max-width: 60rem;
+}
+
+.input-wrapper-special input::placeholder,
+.input-wrapper-special input {
+  font-size: 1.6rem;
+  font-weight: 600;
+
+  color: var(--color-base-dark-blue);
+}
+
+.input-wrapper-special input,
+.input-wrapper textarea {
+  background: var(--color-base-white);
+
+  border: 2px solid var(--color-base-dark-blue);
+  border-radius: 1.6rem;
+
+  padding: 0 1.4rem;
+
+  font-size: 1.6rem;
+
+  color: var(--color-base-dark-blue);
+}
+
+.input-wrapper-special {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1.4rem;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.input-wrapper-special input {
+  padding: 1rem 1rem 1rem 2rem;
+
+  width: 100%;
+
+  text-indent: 3rem;
+}
+
+.input-wrapper textarea {
+  padding: 1.2rem 1.6rem 1.6rem;
+  height: 10rem;
+  width: 100%;
+
+  font-weight: 600;
+}
+
+.input-wrapper textarea::placeholder {
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+
+  color: var(--color-base-dark-blue);
+}
+
+.mybutton {
+  border: 0;
+  border-radius: 1.6rem;
+  padding: 1.6rem;
+
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+
+  width: fit-content;
+
+  background-color: var(--color-base-dark-blue);
+  color: var(--color-base-white);
+
+  text-align: center;
+}
+
+.riskImg {
+  display: none;
+}
+
+footer {
+  margin-top: 6.5rem;
+}
+
+footer p {
+  text-align: center;
+  padding: 3.2rem 1.6rem;
+  font-weight: 600;
+
+  color: var(--color-base-white);
+}
+
+@media (min-width: 1000px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    padding: 0 3rem;
+    margin: 10rem;
+  }
+
+  #astronauta {
+    order: 1;
+    margin-left: auto;
+
+    max-width: 60rem;
+    width: 100%;
+    height: auto;
+  }
+
+  .headerDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    width: 100%;
+
+    margin-bottom: 0;
+  }
+
+  header .headerDiv h1 {
+    font-size: 5rem;
+  }
+
+  header .headerDiv p {
+    margin-bottom: 5rem;
+  }
+
+  main .mainDiv {
+    flex-direction: row;
+  }
+
+  .cards {
+    flex: 1;
+    background-color: var(--color-base-white);
+    padding: 2.6rem;
+    border-radius: 2rem;
+  }
+
+  .secondPart {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .myform {
+    width: 100%;
+    margin-left: 2rem;
+  }
+
+  .riskImg {
+    display: block;
+    margin-left: auto;
+  }
+}

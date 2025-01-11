@@ -11,7 +11,9 @@ const AppError = require("./utils/AppError")
 const uploadConfig = require("./configs/upload")
 
 const app = express();
+// Cors configuration
 app.use(cors());
+// Express configuration to receive JSON data
 app.use(express.json())
 
 app.use("/files", express.static(uploadConfig.UPLOADS_FOLDER))
@@ -35,5 +37,6 @@ app.use((error, request, response, next) => {
   })
 })
 
+// Server configuration to listen to a specific port
 const PORT = process.env.PORT || 3333;
 app.listen(PORT, () => console.log(`Server is running on Port ${PORT}`));

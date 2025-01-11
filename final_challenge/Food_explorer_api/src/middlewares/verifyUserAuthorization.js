@@ -1,3 +1,4 @@
+// Middleware to verify if the user is authorized to access the route
 const AppError = require("../utils/AppError")
 const knex = require("../database/knex")
 

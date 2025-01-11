@@ -1,8 +1,10 @@
+// Dish Controller
 const knex = require("../database/knex")
 const AppError = require("../utils/AppError")
 const DiskStorage = require("../providers/DiskStorage")
 
 class DishesController {
+  // Create a new dish
   async create(request, response) {
     const { title, description, category, price, ingredients } = request.body
 
@@ -30,6 +32,8 @@ class DishesController {
 
     const dish_id = dish.id
 
+    // Logic to insert ingredients
+    
     const hasOnlyOneIngredient = typeof(ingredients) === "string"
 
     let ingredientsInsert
@@ -54,6 +58,7 @@ class DishesController {
     return response.status(201).json()
   }
 
+  // Method to update a dish
   async update(request, response) {
     const { title, description, category, price, ingredients, image } = request.body
     const { id } = request.params
@@ -103,6 +108,7 @@ class DishesController {
     return response.status(201).json()
   }
 
+  // Method to show a dish
   async show(request, response) {
     const { id } = request.params
 
@@ -115,19 +121,13 @@ class DishesController {
     })
   }
 
-  async delete(request, response) {
-    const { id } = request.params
-
-    await knex("dishes").where({ id }).delete()
-
-    return response.json()
-  }
-
+  // Method to list all dishes
   async index(request, response) {
     const { title, ingredients } = request.query
 
     let dishes
 
+    // Logic to filter dishes by title and ingredients
     if (ingredients) {
       const splitIngredients = ingredients.split(",")
       const filterIngredients = splitIngredients.map(ingredient => ingredient.trim())
@@ -164,6 +164,15 @@ class DishesController {
     })
 
     return response.status(200).json(dishesWithIngredients)
+  }
+
+  // Method to delete a dish
+  async delete(request, response) {
+    const { id } = request.params
+
+    await knex("dishes").where({ id }).delete()
+
+    return response.json()
   }
 }
 

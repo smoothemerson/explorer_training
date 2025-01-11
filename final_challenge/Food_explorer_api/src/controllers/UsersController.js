@@ -1,9 +1,11 @@
+// User Controller
 const { hash, compare } = require("bcryptjs");
 const AppError = require("../utils/AppError");
 
 const sqliteConnection = require("../database/sqlite");
 
 class UsersController {
+  // Create a new user
   async create(request, response) {
     const { name, email, password } = request.body;
     
@@ -14,7 +16,7 @@ class UsersController {
     if (name.length < 3) {
       throw new AppError("O nome deve ter no mínimo 3 caracteres")
     }
-
+    
     if (!email.includes("@", ".") || !email.includes(".")) {
       throw new AppError("E-mail inválido")
     }
@@ -30,6 +32,7 @@ class UsersController {
       throw new AppError("Este e-mail já está em uso")
     }
 
+    // Hash the password
     const hashedPassword = await hash(password, 8)
 
     await database.run(

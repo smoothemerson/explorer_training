@@ -1,3 +1,4 @@
+// Create a class to personalize the error messages
 class AppError {
   message
   statusCode
